@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <title>Tufts Observer </title>
-    
+
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Bootstrap latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- Bootstrap latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<!-- Stylesheets -->
@@ -15,11 +14,35 @@
 
   </head>
   <body>
+    <div id="interactive-wrapper">
+
+      <div id="quiz-wrapper">
+        <div id="post">
+        </div>
+
+        <div id="comments-wrapper">
+          <div class="comment the-academic" id="c1">
+            <!-- Initial comment 1 -->
+          </div>
+          <div class="comment the-meme" id="c2">
+            <!-- Initial comment 2 -->
+          </div>
+          <div class="comment player-selection" id="c3" hidden>
+            <!-- Player's choice shows up -->
+          </div>
+          <!-- etc -->
+          <div class="comment" id="playable-area">
+            <!-- Players choice of potential comments are given here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="article-wrapper">
+      <!-- article goes here -->
+    </div>
 
   <!-- Javascript -->
-  <script src="js/waypoints.min.js"></script>
   <script src="js/index_script.js"></script>
-  <script src="js/map.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc8qJ-V8qY-TIbvtRNPB_ARMjvuWd33cA&callback=initMap" async defer></script>
   </body>
 </html>
