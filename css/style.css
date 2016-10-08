@@ -18,6 +18,9 @@ html, body {
 #quiz-wrapper {
 	padding-top: 5%;
 	background-color: #e9ebee;
+    width: 502px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #post {
@@ -67,4 +70,31 @@ html, body {
 
 #article-wrapper {
 
+}
+
+.comment {
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    margin-top: 10px;
+
+    background-color: blue;
+}
+
+#playable-area {
+
+    background-color: orange;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.inactive {
+    pointer-events: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
