@@ -1,10 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn:400,700italic);
+
 html, body {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
 }
 
 #interactive-wrapper {
     height: 100%;
     width: 100%;
+    background-color: #e9ebee;
+}
+
+#quiz-wrapper {
+	padding-top: 5%;
+	background-color: #e9ebee;
+}
+
+#post {
+	height:100px;
+	width:502px;
+	background-color: #fff;
+	margin: auto;
+	padding: 12px 12px 0;
+	box-shadow: 1px 1px 1px #ccc;
+	font-size: 14px;
+	line-height: 1.38;
+	font-weight: normal;
+	font-family: Roboto, helvetica, arial, sans-serif;
+}
+
+#author-name {
+	color: #365899;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#author-name p {
+	display: inline-block;
+	position: fixed;
+}
+
+#time-stamp {
+	color: #90949c;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	position: fixed;
+	top: 95px;
+}
+
+#author-photo {
+	border: 1px solid rgba(0, 0, 0, .1);
+	height: 40px;
+	width: 40px;
+	background-color: #000;
+	margin-right: 10px;
+}
+
+#post-text {
+	margin-top:2%;
 }
 
 #article-wrapper {
