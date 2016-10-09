@@ -34,16 +34,131 @@ a {
 
 #interactive-wrapper {
     height: auto;
-	/*min-height: calc(100% - 82px);*/
     width: 100%;
     background-color: #e9ebee;
 	font-family: helvetica, arial, sans-serif;
+	text-align: center;
+}
+
+#fb-content-wrapper {
+	width: calc(30px + 502px + 180px + 310px);
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+	text-align: left;
+}
+
+#fb-content-left {
+	width: 180px;
+	margin: 52px 5px 10px 5px;
+	font-size: 12px;
+	display: inline-block;
+	float: left;
+}
+
+.ul-title {
+	font-weight: bold;
+	color: #666;
+	font-size: 11px;
+}
+
+#fb-content-left > ul > li {
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 2px;
+	cursor: pointer;
+}
+
+#fb-content-left > ul > li:hover {
+	background-color: #dddfe2;
+}
+
+li > i{
+	width: 12px;
+	margin-right: 2px;
+	text-align: center;
+}
+
+#fb-content-right {
+	width: 310px;
+	margin: 52px 5px 10px 5px;
+	font-size: 12px;
+	display: inline-block;
+	float: right;
+}
+
+#right-wrapper {
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	padding: 12px;
+}
+
+#fb-credits {
+	color: #90949c;
+	padding: 12px;
+}
+
+.events-birthdays {
+	color: #365899;
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: 10px;
+
+}
+
+.events-birthdays > li {
+	cursor: pointer;
+	margin-top: 4px;
+}
+
+.events-birthdays > li:hover {
+	background-color: #f6f7f9;
+}
+
+.events-birthdays > li > i {
+	color: #f35269;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+#right-wrapper > hr {
+	margin: 12px 0;
+}
+
+#right-wrapper > .ul-title {
+	color: #90949c;
+}
+
+.trending {
+	color: #365899;
+	font-weight: bold;
+}
+
+.trending > li {
+	margin-top: 5px;
+}
+
+.trending > li > .fa {
+	width: 20px;
+	color: #5890ff;
+}
+
+.talking {
+	color: #90949c;
+	font-weight: normal;
+	margin-left: 25px;
 }
 
 #quiz-wrapper {
     width: 502px;
-	margin: 52px auto 10px auto;
+	margin: 52px 5px 10px 5px;
 	background-color: #e9ebee;
+	display: inline-block;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
 }
 
 #post {
@@ -232,16 +347,24 @@ a {
 
 #bar-left {
 	height: 24px;;
-	width: calc(50% - 60px);
-	margin: 9px 0 9px 60px;
+	width: auto;
+	margin-top: 9px;
+	margin-bottom: 9px;
+	margin-left: calc((100% - 30px - 502px - 180px - 310px)/2);
 	float: left;
+
+	position: absolute;
+	left:
 }
 
 #bar-right {
 	height: 24px;
-	width: calc(50% - 60px);
-	margin: 9px 60px 9px 0px;
+	width: auto;
+	margin: 9px 0;
 	float: right;
+
+	position: absolute;
+	right: calc((100% - 30px - 502px - 180px - 310px)/2);
 }
 
 #logo {
@@ -301,6 +424,33 @@ a {
 }
 
 #article-wrapper{
-	min-height: 200%;
+	min-height: 200vh;
 	background-color: white;
+}
+
+
+@media only screen and (max-width: 1022px) {
+	#bar-left {
+		margin: 9px 0
+	}
+
+	#bar-right {
+		right: 0;
+	}
+}
+
+@media only screen and (max-width: 850px) {
+	#searchbar {
+		width: calc(100vw - 400px);
+	}
+}
+
+@media only screen and (orientation: portrait) {
+	#fb-content-right, #fb-content-left {
+		display: none;
+	}
+	#quiz-wrapper {
+		margin-left: calc((100vw - 502px)/2);
+		margin-right: calc((100vw - 502px)/2);
+	}
 }

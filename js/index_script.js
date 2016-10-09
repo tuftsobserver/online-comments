@@ -10,12 +10,7 @@ function fadeInCommentStream(round, choice) {
             // if final round, fade in closing comment
             if (round == 3) {
                 setTimeout(function() {
-                    $('#cfinal').fadeIn(2000, function() {
-                        $('#article-wrapper').show();
-                    });
-                    $('html, body').animate({
-                        scrollTop: $("#anchor").offset().top - window.innerHeight
-                    }, 2000);
+                    complete();
                 }, 1000);
             }
             // otherwise fade in followup comment 1
@@ -146,3 +141,27 @@ $('.comment-reply').click(function() {
         scrollTop: $("#anchor").offset().top - window.innerHeight
     }, 800);
 });
+
+function complete() {
+    $('#cfinal').fadeIn(2000, function() {
+        $('#article-wrapper').show();
+    });
+    $('html, body').animate({
+        scrollTop: $("#anchor").offset().top - window.innerHeight
+    }, 2000);
+
+    // if scroll above anchor, change top bar to fixed. if scroll below anchor,
+    // change scroll bar to absolute.
+
+    window.onscroll = function() {hideTopBar()};
+    function hideTopBar() {
+        if (document.body.scrollTop > $('#anchor').position().top - 42) {
+            $('#header-bar').css("top", $('#anchor').position().top - 42);
+            $('#header-bar').css("position", "absolute");
+        } else {
+            $('#header-bar').css("top", "0");
+            $('#header-bar').css("position", "fixed");
+        }
+    }
+
+}
