@@ -157,6 +157,10 @@ $('#skip').click(function() {
     }, 800);
 });
 
+$('#landing-wrapper').click(function() {
+    $(this).fadeOut(800);
+})
+
 function complete() {
     $('#cfinal').fadeIn(2000, function() {
         $('#article-wrapper').show();
