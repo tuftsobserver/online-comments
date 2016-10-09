@@ -142,26 +142,42 @@ $('.comment-reply').click(function() {
     }, 800);
 });
 
+$('#read-more').click(function() {
+    $('html, body').animate({
+        scrollTop: $('#anchor').position().top
+    }, 800);
+});
+
+$('#skip').click(function() {
+    $(this).hide();
+    $('#article-wrapper').show(0);
+    window.onscroll = function() {hideTopBar()};
+    $('html, body').animate({
+        scrollTop: $('#article-wrapper').position().top
+    }, 800);
+});
+
 function complete() {
     $('#cfinal').fadeIn(2000, function() {
         $('#article-wrapper').show();
+        $('#skip').fadeOut(400);
     });
+
     $('html, body').animate({
         scrollTop: $("#anchor").offset().top - window.innerHeight
-    }, 2000);
+    }, 2000, function() {
+        window.onscroll = function() {hideTopBar()};
+    });
+}
 
-    // if scroll above anchor, change top bar to fixed. if scroll below anchor,
-    // change scroll bar to absolute.
-
-    window.onscroll = function() {hideTopBar()};
-    function hideTopBar() {
-        if (document.body.scrollTop > $('#anchor').position().top - 42) {
-            $('#header-bar').css("top", $('#anchor').position().top - 42);
-            $('#header-bar').css("position", "absolute");
-        } else {
-            $('#header-bar').css("top", "0");
-            $('#header-bar').css("position", "fixed");
-        }
+// if scroll above anchor, change top bar to fixed. if scroll below anchor,
+// change scroll bar to absolute.
+function hideTopBar() {
+    if (document.body.scrollTop > $('#article-wrapper').position().top - 42) {
+        $('#header-bar').css("top", $('#article-wrapper').position().top - 42);
+        $('#header-bar').css("position", "absolute");
+    } else {
+        $('#header-bar').css("top", "0");
+        $('#header-bar').css("position", "fixed");
     }
-
 }

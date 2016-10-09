@@ -329,7 +329,6 @@ ul {
 .comment-img {
     width: 100%;
     height: auto;
-	cursor: pointer;
 }
 
 #header-bar {
@@ -421,6 +420,21 @@ ul {
 	color: #365089;
 	margin: 0 10px;
 	pointer-events: none;
+}
+
+#read-more {
+	cursor: pointer;
+}
+
+#skip {
+	position: fixed;
+	font-weight: bold;
+	left: 10px;
+	bottom: 10px;
+	background-color: white;
+	padding: 5px;
+	border: 1px solid #e5e5e5;
+	cursor: pointer;
 }
 
 #article-wrapper{
