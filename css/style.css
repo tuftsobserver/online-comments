@@ -443,14 +443,41 @@ ul {
 	#searchbar {
 		width: calc(100vw - 400px);
 	}
+	#bar-left {
+		margin-left: 10px;
+	}
 }
 
 @media only screen and (orientation: portrait) {
 	#fb-content-right, #fb-content-left {
 		display: none;
 	}
+	#fb-content-wrapper, #interactive-wrapper {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100vw;
+	}
+
 	#quiz-wrapper {
-		margin-left: calc((100vw - 502px)/2);
-		margin-right: calc((100vw - 502px)/2);
+		width: calc(100vw - 10px);
+
+	}
+}
+
+@media only screen and (max-width: 512px) {
+	#quiz-wrapper, #post {
+		width: calc(100vw - 10px);
+	}
+	#searchbar {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.profile-photo {
+		display: none;
+	}
+	.profile-text {
+		display: none;
 	}
 }
