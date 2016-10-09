@@ -7,10 +7,11 @@ html, body {
     margin: 0;
     padding: 0;
     font-size: 14px;
+    background-color: #e9ebee;
 }
 
 #interactive-wrapper {
-    height: 100%;
+    height: auto;
     width: 100%;
     background-color: #e9ebee;
 }
@@ -44,7 +45,7 @@ html, body {
 
 #author-name p {
 	display: inline-block;
-	position: fixed;
+	position: absolute;
 }
 
 #time-stamp {
@@ -52,7 +53,7 @@ html, body {
 	display: inline-block;
 	font-size: 12px;
 	font-weight: normal;
-	position: fixed;
+	position: absolute;
 	top: 95px;
 }
 
@@ -62,6 +63,18 @@ html, body {
 	width: 40px;
 	background-color: #000;
 	margin-right: 10px;
+}
+
+#comment-author-name {
+	color: #365899;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#comment-author-name p {
+	display: inline-block;
+	margin-left: 5px;
 }
 
 #post-text {
@@ -76,18 +89,28 @@ html, body {
     width: 100%;
     min-height: 100px;
     height: auto;
-    margin-top: 10px;
-
-    background-color: blue;
+    background-color: #f6f7f9;
+    box-shadow: 1px 1px 1px #ccc;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #ced0d4;
 }
 
 #playable-area {
-
-    background-color: orange;
+    background-color: #f6f7f9;
 }
 
 .choice {
     cursor: pointer;
+    border-bottom: 1px solid #ced0d4;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.choice .input {
+	margin-right: 5px; 
 }
 
 .inactive {
@@ -98,3 +121,4 @@ img {
     width: 100%;
     height: auto;
 }
+
