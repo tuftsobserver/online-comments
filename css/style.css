@@ -574,15 +574,6 @@ h2 {
 	#skip {
 		display: none;
 	}
-}
-
-@media only screen and (max-width: 512px) {
-	#quiz-wrapper, #post {
-		width: calc(100vw - 10px);
-	}
-	#searchbar {
-		display: none;
-	}
 
 	#landing-text {
 		font-size: 30px;
@@ -594,6 +585,15 @@ h2 {
 
 	#article-text, h2 {
 		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 512px) {
+	#quiz-wrapper, #post {
+		width: calc(100vw - 10px);
+	}
+	#searchbar {
+		display: none;
 	}
 }
 
