@@ -16,7 +16,7 @@ function fadeInCommentStream(round, choice) {
                     $('html, body').animate({
                         scrollTop: $("#anchor").offset().top - window.innerHeight
                     }, 2000);
-                }, 800);
+                }, 1000);
             }
             // otherwise fade in followup comment 1
             else {
@@ -86,21 +86,33 @@ $('#choice-a').click(function(){
     $('#playable-area').fadeOut(800, function() {
         fadeInCommentStream(round,'a');
     });
+    $('html, body').animate({
+        scrollTop: $("#upper-anchor").offset().top - window.innerHeight
+    }, 800);
 });
 $('#choice-b').click(function(){
     $('#playable-area').fadeOut(800, function() {
         fadeInCommentStream(round,'b');
     });
+    $('html, body').animate({
+        scrollTop: $("#upper-anchor").offset().top - window.innerHeight
+    }, 800);
 });
 $('#choice-c').click(function(){
     $('#playable-area').fadeOut(800, function() {
         fadeInCommentStream(round,'c');
     });
+    $('html, body').animate({
+        scrollTop: $("#upper-anchor").offset().top - window.innerHeight
+    }, 800);
 });
 $('#choice-d').click(function(){
     $('#playable-area').fadeOut(800, function() {
         fadeInCommentStream(round,'d');
     });
+    $('html, body').animate({
+        scrollTop: $("#upper-anchor").offset().top - window.innerHeight
+    }, 800);
 });
 
 
@@ -123,7 +135,7 @@ $('.post-like').click(function() {
 
 $('.comment-like').click(function() {
     if($(this).html() == "Like") {
-        $(this).html("Unlike");
+        $(this).html("<i class='fa fa-thumbs-up' aria-hidden='true'></i> Unlike");
     } else {
         $(this).html("Like");
     }

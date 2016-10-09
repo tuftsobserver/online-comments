@@ -19,6 +19,10 @@ html, body {
     background-color: #e9ebee;
 }
 
+body {
+	height: auto;
+}
+
 a {
 	color: #365899;
 }
@@ -30,27 +34,27 @@ a {
 
 #interactive-wrapper {
     height: auto;
-	min-height: calc(100% - 20px);
+	/*min-height: calc(100% - 82px);*/
     width: 100%;
     background-color: #e9ebee;
+	font-family: helvetica, arial, sans-serif;
 }
 
 #quiz-wrapper {
     width: 502px;
-	margin: 20px auto;
+	margin: 52px auto 10px auto;
 	background-color: #e9ebee;
 }
 
 #post {
 	width: 502px;
 	margin: auto;
-	padding: 12px 12px;
+	padding: 12px;
 	border: 1px solid #e5e5e5;
 	background-color: #fff;
 	font-size: 14px;
 	line-height: 1.38;
 	font-weight: normal;
-	font-family: Roboto, helvetica, arial, sans-serif;
 }
 
 #post-info {
@@ -151,6 +155,10 @@ a {
 
 .comment-footer {
 	color: #90949c;
+}
+
+.comment-footer > a,
+.comment-footer > span {
 	cursor: pointer;
 }
 
@@ -199,7 +207,7 @@ a {
 	order: 2;
 }
 
-#anchor {
+#anchor, #upper-anchor {
 	height: 0px;
 }
 
@@ -209,6 +217,90 @@ a {
 	cursor: pointer;
 }
 
+#header-bar {
+	height: 42px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	background-color: #3b5998;
+
+	/*padding: 9px;*/
+	display: inline-block;
+}
+
+#bar-left {
+	height: 24px;;
+	width: calc(50% - 60px);
+	margin: 9px 0 9px 60px;
+	float: left;
+}
+
+#bar-right {
+	height: 24px;
+	width: calc(50% - 60px);
+	margin: 9px 60px 9px 0px;
+	float: right;
+}
+
+#logo {
+	height: 100%;
+	width: auto;
+	border-radius: 2px;
+}
+
+#searchbar {
+	height: 24px;
+	width: 450px;
+	margin-left: 5px;
+	padding-left: 5px;
+	border-radius: 2px;
+	border: none;
+	background-color: #fff;
+}
+
+.profile-photo {
+	height: 24px;
+	width: 24px;
+	background-color: black;
+}
+
+.profile-text {
+	width: auto;
+	margin-right: 0;
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	margin-left: 2px;
+	display: inline-block;
+	pointer-events: none;
+
+}
+
+.profile-buttons {
+	color: #17233d;
+	font-size: 20px;
+	width: auto;
+	margin-top: -4px;
+	margin-left: 40px;
+	display: inline-block;
+	position: relative;
+	top: 2px;
+}
+
+.profile-buttons > i {
+	cursor: pointer;
+	padding: 0 2px;
+}
+
+.vertical-div {
+	color: #365089;
+	margin: 0 10px;
+	pointer-events: none;
+}
+
 #article-wrapper{
 	min-height: 200%;
+	background-color: white;
 }

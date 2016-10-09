@@ -22,6 +22,28 @@
   <body>
     <div id="interactive-wrapper">
 
+      <div id="header-bar">
+        <div id="bar-left">
+          <a href="http://tuftsobserver.org"><img id="logo" src='img/logo.png' alt="facebook logo"/></a>
+          <input id="searchbar" type="text" placeholder="Search"/>
+        </div>
+        <div id="bar-right">
+          <img class="profile-photo" />
+          <div class="profile-text">
+            You <i class="fa fa-star" aria-hidden="true"></i><span class="vertical-div">|</span>Home
+          </div>
+          <div class="profile-buttons">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <i class="fa fa-globe" aria-hidden="true"></i>
+            <span class="vertical-div">|</span>
+            <i class="fa fa-cogs" aria-hidden="true"></i>
+            <i class="fa fa-caret-down" aria-hidden="true"></i>
+
+          </div>
+        </div>
+      </div>
+
       <div id="quiz-wrapper">
         <div id="post">
           <div id="post-info">
@@ -244,6 +266,7 @@
               </div>
             </div>
           </div>
+          <div id="upper-anchor"></div>
           <div class="comment" id="playable-area" hidden>
             <div class="choice no-border-top" id="choice-a">
               <div class="num">1.</div>
@@ -270,8 +293,8 @@
           </div>
         </div>
       </div>
+      <div id="anchor"></div>
     </div>
-    <div id="anchor"></div>
     <div id="article-wrapper" hidden>
       <!-- article goes here -->
     </div>
