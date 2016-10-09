@@ -583,6 +583,18 @@ h2 {
 	#searchbar {
 		display: none;
 	}
+
+	#landing-text {
+		font-size: 30px;
+	}
+
+	h1 {
+		font-size: 30px;
+	}
+
+	#article-text, h2 {
+		font-size: 12px;
+	}
 }
 
 @media only screen and (max-width: 380px) {
