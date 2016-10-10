@@ -478,7 +478,6 @@ ul {
 	font-family: "ubuntu", sans-serif;
 	font-weight: 300;
 	line-height: 1.6;
-	text-align: justify;
 	background-color: #fff;
 }
 
@@ -486,6 +485,11 @@ h1 {
 	font-family: "Playfair Display", serif;
 	font-size: 70px;
 	text-align: left;
+}
+
+h1 .fa {
+	font-size: 14px;
+	color: #365899;
 }
 
 h2 {
@@ -498,7 +502,7 @@ h2 {
 .end-credits {
 	font-family: "Playfair Display", serif;
 	font-size: 20px;
-	color: #5376ba;
+	color: #365899;
 }
 
 /*************************** RESPONSIVE QUERIES ******************************/
@@ -556,6 +560,10 @@ h2 {
 	#article-text,
 	h2 {
 		font-size: 12px;
+	}
+
+	h1 .fa {
+		font-size: 6px;
 	}
 }
 
