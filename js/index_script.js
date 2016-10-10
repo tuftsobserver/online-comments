@@ -1,13 +1,13 @@
 var round = 1;
 
 // fadeIn all comments in the stream for the given round and choice with
-// various timed spacing between each one and autoscrolls to bottom
+// various timed spacing between each one and autoscroll to bottom
 function fadeInCommentStream(round, choice) {
     root = 'c' + round + choice;
     // fade in your comment
     $('#' + root).fadeIn(800, function(){
         setTimeout(function() {
-            // if final round, fade in closing comment
+            // if final round, break off here
             if (round == 3) {
                 setTimeout(function() {
                     complete();
@@ -77,6 +77,7 @@ function startRound3() {
     round = 3;
 }
 
+// When you click a choice, it fades in the appropriate stream and scrolls down
 $('#choice-a').click(function(){
     $('#playable-area').fadeOut(800, function() {
         fadeInCommentStream(round,'a');
@@ -110,12 +111,13 @@ $('#choice-d').click(function(){
     }, 800);
 });
 
-
+// flashing thing will stop flashing when you click it
 $('.pulsing').click(function() {
     $('#playable-area').fadeIn(800);
     $(this).removeClass('pulsing');
 });
 
+// when you like something it turns blue, when you unlike it, it goes back
 $('.post-like').click(function() {
     if ($(this).hasClass("blue")) {
         $(this).removeClass("blue");
@@ -128,6 +130,7 @@ $('.post-like').click(function() {
 
 });
 
+// when you like a comment, it adds a thumbs up. If you unlike it, that goes away
 $('.comment-like').click(function() {
     if($(this).html() == "Like") {
         $(this).html("<i class='fa fa-thumbs-up' aria-hidden='true'></i> Unlike");
@@ -136,18 +139,21 @@ $('.comment-like').click(function() {
     }
 });
 
+// If you click "reply" to a comment, it scrolls you down to the choice area
 $('.comment-reply').click(function() {
     $('html, body').animate({
         scrollTop: $("#anchor").offset().top - window.innerHeight
     }, 800);
 });
 
+// Clicking the "read more" link scrolls you to the article
 $('#read-more').click(function() {
     $('html, body').animate({
         scrollTop: $('#anchor').position().top
     }, 800);
 });
 
+// Clicking the skip button hides the skip button and scrolls you to the article
 $('#skip').click(function() {
     $(this).hide();
     $('#article-wrapper').show(0);
@@ -157,10 +163,12 @@ $('#skip').click(function() {
     }, 800);
 });
 
+// Landing page disappears on click
 $('#landing-wrapper').click(function() {
     $(this).fadeOut(800);
 })
 
+// When you're done with teh simulation, shows final comment, hides skip option
 function complete() {
     $('#cfinal').fadeIn(2000, function() {
         $('#article-wrapper').show();
@@ -174,7 +182,7 @@ function complete() {
     });
 }
 
-// if scroll above anchor, change top bar to fixed. if scroll below anchor,
+// if scroll above article, change top bar to fixed. if scroll into article,
 // change scroll bar to absolute.
 function hideTopBar() {
     if (document.body.scrollTop > $('#article-wrapper').position().top - 42) {

@@ -212,6 +212,11 @@ ul {
 	color: #90949c; /*fb text grey*/
 }
 
+#like-comment .fa {
+	font-size: 14px;
+	cursor: pointer;
+}
+
 .pulsing {
 	animation: pulse 1s infinite;
 	cursor: pointer;
@@ -219,12 +224,6 @@ ul {
 
 .blue {
 	color: #365899; /*facebook blue*/
-}
-
-#like-comment .fa {
-	font-size: 14px;
-	color: #afb4bd;
-	cursor: pointer;
 }
 
 /****************************** COMMENTS **************************************/
