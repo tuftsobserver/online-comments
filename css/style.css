@@ -478,6 +478,7 @@ ul {
 	font-family: "ubuntu", sans-serif;
 	font-weight: 300;
 	line-height: 1.6;
+	text-align: justify;
 	background-color: #fff;
 }
 
@@ -560,6 +561,7 @@ h2 {
 	#article-text,
 	h2 {
 		font-size: 12px;
+		text-align: left;
 	}
 
 	h1 .fa {
