@@ -273,6 +273,7 @@ ul {
     border-top: 1px solid #e5e5e5;
     padding-top: 10px;
     padding-bottom: 10px;
+	display: -webkit-flex;
 	display: flex;
 	align-items: center;
 	cursor: pointer;

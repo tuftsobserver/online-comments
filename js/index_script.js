@@ -46,13 +46,16 @@ function fadeInCommentStream(round, choice) {
 function startRound2() {
     $("#choice-a > .choice-text").html("*grabs bacon-flavored popcorn*");
     $("#choice-b > .choice-text").html(
-        "Hi so I want to complicate this. Veganism is a vehicle for white supremacy, and posting about it is a performative attempt to obtain white social capital. It also is a classist ideology, as expecting people to sustain themselves on a plant-based diet is expensive. Before marginalizing these communities, think about your reasons for posting."
+        "Hi so I want to complicate this. Veganism is a vehicle for white supremacy, and posting about it is a performative attempt to obtain white social capital. Before marginalizing individuals who many not fit into this picture, think about your reasons for posting."
     );
     $("#choice-c > .choice-text").html(
         "While it is absolutely important to recognize the detrimental effects the meat production industry is having on our climate, we should also note that the mass consumption of fossil fuels and their derivatives has contributed vastly more to climate change than cattle in the United States. Also, we should be critical of the US's role in starting wars and destabilizing the Middle East in order to obtain oil."
     );
-
-    $('#choice-c').css('display', 'flex');
+    $("#choice-d > .choice-text").html(
+        "Hey, I think it's important not to overlook veganism as a classist institution. Expecting people to susain themselves on a plant-based diet is expensive and impractical--deciding to become vegan isn't always such a simple choice."
+    );
+    $('#choice-c').attr('style', 'display: -webkit-flex; display: flex');
+    $('#choice-d').attr('style', 'display: -webkit-flex; display: flex');
     $('#playable-area').fadeIn(800);
     $('html, body').animate({
         scrollTop: $("#anchor").offset().top - window.innerHeight
@@ -66,9 +69,7 @@ function startRound3() {
     $("#choice-a > .choice-text").html("Veganism. Is. Oppressive. And. Marginalizing. I can't say it enough.");
     $("#choice-b > .choice-text").html("Hi I would love to continue this conversation in person because I feel it's really important. Message me!");
     $("#choice-c > .choice-text").html("Honestly I'm done with all of you--go back to composting your kale, thanks.");
-    $("#choice-d > .choice-text").html("Here's an article on intersectionality b/c veganism is classist and racist.");
-
-    $('#choice-d').css('display', 'flex');
+    $("#choice-d > .choice-text").html("Go read an article on intersectionality about how veganism is classist and racist.");
     $('#playable-area').fadeIn(800);
     $('html, body').animate({
         scrollTop: $("#anchor").offset().top - window.innerHeight
