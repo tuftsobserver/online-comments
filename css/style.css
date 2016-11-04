@@ -485,6 +485,8 @@ ul {
 
 h1 {
 	font-family: "Playfair Display", serif;
+	font-weight: 900;
+	font-style: italic;
 	font-size: 70px;
 	text-align: left;
 }
@@ -503,6 +505,8 @@ h2 {
 
 .end-credits {
 	font-family: "Playfair Display", serif;
+	font-weight: 900;
+	font-style: italic;
 	font-size: 20px;
 	color: #365899;
 }
